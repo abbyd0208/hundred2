@@ -1,10 +1,10 @@
 /*==========================layout============================*/
 
-.wrapper{ clear:both;}
+.wrapper{ width:100%; clear:both;}
 /*header==============*/
 header.c1{ width:100%; height:100vh; background:#3a7ba1 url(../images/header_1920x1280.jpg) center top no-repeat; background-size:100% auto; position:relative; border:1px solid red;/**/ }
 header.c1::before{ display:block; content:""; width:100%; height:100vh; background:#3a7ba1; position:absolute; left:0; top:0; opacity:0.8;}
-header.c1 .inner{ width:1024px;}
+header.c1 .inner{ }
 header.c1 .inner h1{ color:#fff; font-weight:bold; position:absolute; left:50%; top:200px; margin-left:-200px; text-shadow:0px 2px 1px rgba(0,0,0,0.2)}
 header.c1 .inner h2{  color:#fff; position:absolute; left:50%; top:260px; margin-left:-130px;}
 header.c1 .inner p.slogan{ width:280px; font-size:15px; color:#fff; position:absolute; top:320px; left:50%; margin-left:-128px;}
@@ -50,8 +50,17 @@ header.c1 .inner .scroll_d span{}
 .block_1 .block_title i[class^="fa"]{ float:left; margin-right:10px; font-size:28px; color:#408db9;}
 .block_1 .block_title h2{ float:left; color:#408db9}
 .block_1 .block_content{}
+.block_1 .block_content .process{}
+.block_1 .block_content .process img.pc{ display:block; width:100%; max-width:960px;}
+.block_1 .block_content .process img.m{ display:none;}
+/*小於600*/
+@media only screen and (max-width:599px){
+	.block_1 .block_content .process img.pc{ display:none; }
+.block_1 .block_content .process img.m{ display:block; width:100%; max-width:480px;}
+}
 
-/*part_list_1==========*/
+
+/*part_list_1 維修項目==========*/
 .part_list_1{ width:100%; max-width:800px; margin:0 auto;  border:1px solid red;/**/}
 .part_list_1 .piece{ float:left; margin-right:50px; margin-bottom:30px; border:1px solid green;/**/}
 .part_list_1 .piece:nth-child(3n-3){ margin-right:0pc;}
@@ -65,16 +74,16 @@ header.c1 .inner .scroll_d span{}
 
 /*小於600*/
 @media only screen and (max-width:599px){
-	.container section{ padding:0 20px;}
+	.part_list_1 .piece{ float:none; margin-right:0px; margin-bottom:30px; border:1px solid green;/**/}
 }
 
 
-/*part_list_2==========*/
+/*part_list_2 各廠牌家電維修==========*/
 .part_list_2{}
 .part_list_2 .piece{ width:204px; min-height:320px; float:left; margin-right:46px; background:#fff; box-shadow:0px 2px 1px 0px rgba(0,0,0,0.2)}
 .part_list_2 .piece:last-child{ margin-right:0px;}
 .part_list_2 .piece h3{ margin-bottom:10px; padding:20px 20px 10px 20px; text-align:center; letter-spacing:1px;}
-.part_list_2 .piece h3::after{ display:block; content:""; width:160px; height:5px; position:relative; top:8px;
+.part_list_2 .piece h3::after{ display:block; content:""; width:160px; height:5px; position:relative; top:8px; left:50%; margin-left:-80px;
 background: rgb(65,142,185); /* Old browsers */
 background: -moz-linear-gradient(left,  rgba(65,142,185,1) 0%, rgba(101,203,204,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(left,  rgba(65,142,185,1) 0%,rgba(101,203,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -96,7 +105,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#418eb9', end
 
 
 /*footer===================================*/
-.footer{ background:#408db9; height:300px;}
-.footer .inner{ max-width:960px; margin:0 auto; padding:50px 0 50px 0;}
+.footer{ background:#408db9;}
+.footer .inner{ width:100%; max-width:960px; margin:0 auto; padding:50px ;}
 .footer .inner p{ color:#fff; font-size:18px;}
 .footer .inner p.copy{ float:right; opacity:0.5; font-size:13px;}
+
+/*小於600*/
+@media only screen and (max-width:599px){
+	.footer .inner{ padding:20px; }
+	.footer .inner p{ color:#fff; font-size:16px;}
+	.footer .inner p.copy{ float:none; margin-top:20px;}
+}
