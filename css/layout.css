@@ -2,15 +2,23 @@
 
 .wrapper{ clear:both;}
 /*header==============*/
-header{ width:100%; height:100vh; background:#3a7ba1 url(../images/header_1920x1280.jpg) center top no-repeat; background-size:100% auto; position:relative; border:1px solid red;/**/ }
-header::before{ display:block; content:""; width:100%; height:100vh; background:#3a7ba1; position:absolute; left:0; top:0; opacity:0.8;}
-
-
-
+header.c1{ width:100%; height:100vh; background:#3a7ba1 url(../images/header_1920x1280.jpg) center top no-repeat; background-size:100% auto; position:relative; border:1px solid red;/**/ }
+header.c1::before{ display:block; content:""; width:100%; height:100vh; background:#3a7ba1; position:absolute; left:0; top:0; opacity:0.8;}
 header.c1 .inner{ width:1024px;}
 header.c1 .inner h1{ color:#fff; font-weight:bold; position:absolute; left:50%; top:200px; margin-left:-200px; text-shadow:0px 2px 1px rgba(0,0,0,0.2)}
 header.c1 .inner h2{  color:#fff; position:absolute; left:50%; top:260px; margin-left:-130px;}
 header.c1 .inner p.slogan{ width:280px; font-size:15px; color:#fff; position:absolute; top:320px; left:50%; margin-left:-128px;}
+
+
+/*小於600*/
+@media only screen and (max-width:599px){
+	header.c1{height:70vh;}
+	header.c1::before{height:70vh;}
+	header.c1 .inner h1{ font-size:28px; margin-left:-200px; margin-left:-140px;  top:80px;}
+	header.c1 .inner h2{ font-size:18px; margin-left:-125px; top:130px;}
+	header.c1 .inner p.slogan{top:200px;margin-left:-130px;}
+}
+
 
 header.c1 .inner .scroll_d{}
 header.c1 .inner .scroll_d .mouse{}
@@ -25,6 +33,12 @@ header.c1 .inner .scroll_d span{}
 .container section.bg_1{ background:#eee;}
 .container section .inner{width:100%; max-width:960px; margin:0 auto; padding:50px 0px 80px 0px;  border:2px solid orange;/**/}
 
+/*小於600*/
+@media only screen and (max-width:599px){
+	.container section{ padding:0 20px;}
+}
+
+
 /*block================*/
 .block{ clear:both;}
 .block .block_title{clear:both;}
@@ -38,7 +52,7 @@ header.c1 .inner .scroll_d span{}
 .block_1 .block_content{}
 
 /*part_list_1==========*/
-.part_list_1{ width:800px; margin:0 auto;  border:1px solid red;/**/}
+.part_list_1{ width:100%; max-width:800px; margin:0 auto;  border:1px solid red;/**/}
 .part_list_1 .piece{ float:left; margin-right:50px; margin-bottom:30px; border:1px solid green;/**/}
 .part_list_1 .piece:nth-child(3n-3){ margin-right:0pc;}
 .part_list_1 .piece h3{ display:inline-block; width:60px; height:60px; background:url(../images/icon_84.png) center top; background-size:60px auto;  text-indent:-9999px;}
@@ -48,6 +62,12 @@ header.c1 .inner .scroll_d span{}
 
 .part_list_1 .piece p{ display:inline-block; padding:0 15px; border-right:2px solid #408db9; position:relative; top:15px; left:0;}
 .part_list_1 .piece p:last-child{ border-right:0px;}
+
+/*小於600*/
+@media only screen and (max-width:599px){
+	.container section{ padding:0 20px;}
+}
+
 
 /*part_list_2==========*/
 .part_list_2{}
@@ -63,9 +83,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#418eb9', end
 
 }
 .part_list_2 .piece ul{ padding:10px 0;}
-.part_list_2 .piece li{ padding-left:35px}
+.part_list_2 .piece li{ padding-left:35px; border:1px solid green;}
 .part_list_2 .piece li p{ display:inline-block; margin-right:8px;}
 .part_list_2 .piece li span{ font-size:13px; color:#666;}
+
+/*小於600*/
+@media only screen and (max-width:599px){
+	.part_list_2 .piece{ width:80%; float:none; margin:0 auto; margin-bottom:30px; padding:0 50px;}
+	.part_list_2 .piece li{ padding-left:0px;}
+	.part_list_2 .piece:last-child{ margin:auto;}
+}
+
 
 /*footer===================================*/
 .footer{ background:#408db9; height:300px;}
