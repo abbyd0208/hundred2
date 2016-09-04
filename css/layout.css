@@ -8,22 +8,74 @@ header.c1 .inner{ }
 header.c1 .inner h1{ color:#fff; font-weight:bold; position:absolute; left:50%; top:200px; margin-left:-200px; text-shadow:0px 2px 1px rgba(0,0,0,0.2)}
 header.c1 .inner h2{  color:#fff; position:absolute; left:50%; top:260px; margin-left:-130px;}
 header.c1 .inner p.slogan{ width:280px; font-size:15px; color:#fff; position:absolute; top:320px; left:50%; margin-left:-128px;}
+header.c1 .inner .scroll_d{ position:absolute; bottom:20px; left:50%; margin-left:-20px; z-index:5; text-align:center;}
+header.c1 .inner .scroll_d .mouse{ display:block; width:80%; margin-left:5px; margin-bottom:10px;}
+header.c1 .inner .scroll_d .arrow{ display:block; width:50%; height:auto; margin-left:12px;}
+header.c1 .inner .scroll_d span{ color:#fff; font-size:13px;}
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+	
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
 
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+		
+	animation-iteration-count:infinite;
+	visibility: visible !important;						
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+		opacity:0;
+	    
+	}
+	50%{
+		transform: translateY(8%);
+		
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+		opacity:1;
+	}		
+}
 
 /*小於600*/
 @media only screen and (max-width:599px){
-	header.c1{height:70vh;}
+	header.c1{height:70vh; background-size:cover;}
 	header.c1::before{height:70vh;}
 	header.c1 .inner h1{ font-size:28px; font-weight:normal; margin-left:-140px; top:80px;}
 	header.c1 .inner h2{ font-size:18px; margin-left:-125px; top:130px;}
 	header.c1 .inner p.slogan{top:200px;margin-left:-130px;}
+	header.c1 .inner .scroll_d{ position:absolute; bottom:15px; left:50%; margin-left:-20px;}
+header.c1 .inner .scroll_d .mouse{width:50%; margin-left:15px;}
+header.c1 .inner .scroll_d .arrow{ width:30%; margin-left:20px;}
 }
 
 
-header.c1 .inner .scroll_d{}
-header.c1 .inner .scroll_d .mouse{}
-header.c1 .inner .scroll_d .arrow{}
-header.c1 .inner .scroll_d span{}
+
+/*小於320*/
+@media only screen and (max-width:319px){
+	header.c1{height:80vh;}
+	header.c1::before{height:80vh;}
+	header.c1 .inner .scroll_d{ position:absolute; bottom:15px; left:50%; margin-left:-20px;}
+header.c1 .inner .scroll_d .mouse{width:40%; margin-left:15px;}
+header.c1 .inner .scroll_d .arrow{ width:30%; margin-left:18px;}
+}
+
+
+
 
 /*container==============*/
 
