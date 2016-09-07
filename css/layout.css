@@ -53,8 +53,8 @@ header.c1 .inner .scroll_d span{ color:#fff; font-size:13px;}
 
 /*小於600*/
 @media only screen and (max-width:599px){
-	header.c1{height:70vh; background-size:cover;}
-	header.c1::before{height:70vh;}
+	header.c1{height:80vh; background-size:cover;}
+	header.c1::before{height:80vh;}
 	header.c1 .inner h1{ font-size:28px; font-weight:normal; margin-left:-140px; top:80px;}
 	header.c1 .inner h2{ font-size:18px; margin-left:-125px; top:130px;}
 	header.c1 .inner p.slogan{top:200px;margin-left:-130px;}
