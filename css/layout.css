@@ -66,7 +66,7 @@ header.c1 .inner .scroll_d .arrow{ width:30%; margin-left:20px;}
 
 
 /*小於320*/
-@media only screen and (max-width:319px){
+@media only screen and (max-width:320px){
 	header.c1{height:80vh;}
 	header.c1::before{height:80vh;}
 	header.c1 .inner .scroll_d{ position:absolute; bottom:15px; left:50%; margin-left:-20px;}
